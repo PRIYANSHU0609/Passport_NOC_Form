@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="form-container">
+    <h2>APPLICATION FORM FOR N.O.C FROM VIGILANCE CELL FOR OBTAINING PASSPORT</h2>
+
+    <form>
+      <div class="box">
+        <div class="row">
+          <label>P.No.
+            <input type="number" placeholder="P.No.">
+          </label>
+          <label>Employee Name
+            <input type="text" placeholder="Name of the employee">
+          </label>
+        </div>
+
+        <div class="row">
+          <label>Designation
+            <input type="text" placeholder="Designation">
+          </label>
+          <label>Dept.
+            <input type="text" placeholder="Dept.">
+          </label>
+        </div>
+
+        <div class="row">
+          <label>Permanent address
+            <input type="text" placeholder="Enter your permanent address">
+          </label>
+        </div>
+
+        <div class="row">
+          <label>Date of joining in NALCO
+            <input type="date">
+          </label>
+          <label>Scale of pay & Present basic
+            <input type="text" placeholder="Enter scale of pay and basic">
+          </label>
+        </div>
+
+        <div class="row">
+          <label>Movable property
+            <input type="text" placeholder="Details of Movable property">
+          </label>
+          <label>Immovable property
+            <input type="text" placeholder="Details of Immovable property">
+          </label>
+        </div>
+      </div>
+
+      <div class="box">
+        <label for="toggle1">Whether application made earlier</label>
+        <div class="toggle-switch">
+          <span>No</span>
+          <label><input type="checkbox" class="toggle-checkbox" id="toggle1" onchange="toggleInput(this)">
+            <label for="toggle1" class="switch"></label>
+            <span>Yes</span>
+          </label>
+        </div>
+        <input type="text" id="input1" class="hidden-input" placeholder="If yes, mention date and to whom" />
+      </div>
+
+      <div class="box">
+        <label for="toggle2">Where visited foreign country earlier</label>
+        <div class="toggle-switch">
+          <span>No</span>
+          <label><input type="checkbox" class="toggle-checkbox" id="toggle2">
+            <label for="toggle2" class="switch"></label>
+            <span>Yes</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="row">
+        <label>Name of proposed place of visit
+          <input type="text" placeholder="Enter the name of the place">
+        </label>
+      </div>
+
+      <div class="row">
+        <label>Reason for visit and duration
+          <input type="text" placeholder="Mention reason and duration">
+        </label>
+      </div>
+
+      <div class="row">
+        <label>To whom visit will be made with address
+          <input type="text" placeholder="To whom visit will be made with address">
+        </label>
+      </div>
+
+      <div class="row">
+        <label>Source of fund for visit
+          <input type="text" placeholder="Mention the Source of fund ">
+        </label>
+      </div>
+
+      <div class="row checkbox-row">
+        <input type="checkbox" id="certify">
+        <label for="certify">
+          <strong>I certify that</strong> the information furnished in the above application form is in order.
+        </label>
+      </div>
+
+      <div class="buttons">
+        <button type="reset">Clear Form</button> <button type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    function toggleInput(checkbox) {
+      const input = document.getElementById('input1');
+      if (checkbox.checked) {
+        input.classList.add('show');
+      } else {
+        input.classList.remove('show');
+      }
+    }
+  </script>
+</body>
+</html>
